@@ -7,7 +7,14 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
     console.log(exerciseVideos);
 
     return (
-        <Box sx={{ marginTop: { lg: '203px', xs: '20px' } }} p="20px">
+        <Box
+            sx={{ marginTop: { lg: '203px', xs: '20px' } }}
+            p="20px"
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+        >
             <Typography
                 sx={{ fontSize: { lg: '44px', xs: '25px' } }}
                 fontWeight={700}
