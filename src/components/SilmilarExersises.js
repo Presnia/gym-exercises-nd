@@ -1,5 +1,6 @@
 import React from 'react';
 import { Box, Stack, Typography } from '@mui/material';
+
 import HorizontalScrollbar from './HorizontalScrollbar';
 import Loader from './Loader';
 
@@ -10,7 +11,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
                 Exercises that target the same muscle group
             </Typography>
             <Stack direction="row" sx={{ p: '2', position: 'relative' }}>
-                {targetMuscleExercises.length ? (
+                {targetMuscleExercises.length !== 0 ? (
                     <HorizontalScrollbar data={targetMuscleExercises} />
                 ) : (
                     <Loader />
@@ -20,7 +21,7 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
                 Exercises that target the same equipment
             </Typography>
             <Stack direction="row" sx={{ p: '2', position: 'relative' }}>
-                {equipmentExercises.length ? (
+                {equipmentExercises.length !== 0 ? (
                     <HorizontalScrollbar data={equipmentExercises} />
                 ) : (
                     <Loader />
